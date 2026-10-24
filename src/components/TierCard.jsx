@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 export function TierCard({ tier, index, total }) {
   const isPopular = tier.popular

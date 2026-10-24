@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 const steps = [
   { num: '1', title: 'Paste your numbers', desc: 'Product price, COGS, shipping, ads — takes 10 seconds' },
