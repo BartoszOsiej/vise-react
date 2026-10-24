@@ -51,11 +51,13 @@ export function Pricing() {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
-  const springs = useSpring({
-    to: { count: mounted ? TARGET : 0 },
-    config: { stiffness: 100, damping: 20, duration: 2.5 },
-  })
-  const displayCount = useTransform(springs.count, (v) => Math.floor(v))
+  const count = useSpring(0, { stiffness: 100, damping: 20 })
+  const displayCount = useTransform(count, (v) => Math.floor(v))
+
+  useEffect(() => {
+    setMounted(true)
+    count.set(TARGET)
+  }, [])
 
   return (
     <section className="pricing">

@@ -23,11 +23,7 @@ export function Calculator() {
   const profit   = price - total
 
   // Spring animation for profit number
-  const springProfit = useSpring({
-    initial: profit,
-    to: profit,
-    config: { stiffness: 300, damping: 30, duration: 0.6 },
-  })
+  const springProfit = useSpring(profit, { stiffness: 300, damping: 30 })
   const displayProfit = useTransform(springProfit, (v) => fmt(v, r.currency))
 
   // Update spring when profit changes
