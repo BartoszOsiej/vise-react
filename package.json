@@ -8,14 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "type-check": "tsc --noEmit",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react-swc": "^4.3.3",
-    "gh-pages": "^24.0.0",
     "typescript": "~6.0.3",
     "vite": "^8.3.4"
   },
